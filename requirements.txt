@@ -1,0 +1,27 @@
+# Mycosoft Embodiment - myCobot 280 Robot Control
+# Python 3.10+ required
+
+# Robot SDK
+pymycobot>=3.3.0
+numpy>=1.26.0
+
+# FastAPI server
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Configuration
+pyyaml>=6.0.1
+
+# Serial communication (Windows)
+pyserial>=3.5
+
+# Logging & Utilities
+loguru>=0.7.2
+python-dotenv>=1.0.0
+
+# Development & Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.26.0

@@ -1,0 +1,66 @@
+api:
+  cors_origins:
+  - http://localhost:3000
+  - http://localhost:8010
+  - https://sandbox.mycosoft.com
+  host: 0.0.0.0
+  port: 8086
+  version: v1
+logging:
+  file: logs/robot-service.log
+  level: INFO
+  retention: 7 days
+  rotation: 1 day
+motion:
+  default_speed: 20
+  home_position:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  interpolation: joint
+  timeout: 30
+robot:
+  # For Pi version: Control via network to Raspberry Pi
+  # The Pi communicates with servos internally
+  pi_host: "192.168.55.1"
+  pi_port: 9000  # Socket server port (needs to be started on Pi)
+  
+  # Direct serial (for non-Pi versions or testing)
+  port: COM9
+  baudrate: 115200
+  
+  manufacturer: Elephant Robotics
+  model: myCobot 280 Pi
+  
+  # Mock mode - set to false once Pi connection works
+  mock_mode: true
+safety:
+  collision_detection: true
+  confirm_large_moves: true
+  emergency_stop_time: 0.5
+  joint_limits:
+    j1:
+    - -165
+    - 165
+    j2:
+    - -165
+    - 165
+    j3:
+    - -165
+    - 165
+    j4:
+    - -165
+    - 165
+    j5:
+    - -165
+    - 165
+    j6:
+    - -175
+    - 175
+  large_move_threshold: 45
+  max_acceleration: 100
+  max_speed: 50
+  speed_limit_percent: 30
